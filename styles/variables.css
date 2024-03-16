@@ -1,0 +1,20 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+/* Файл variables.css */
+:root {
+  --background-theme: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --font-size: 18px;
+  --font-weight: 700;
+  --line-height: 23.4px;
+  --main-color: #000028;
+  --font: "IBM Plex Mono", Courier, monospace;
+  --text-color: #f1b2ce;
+  --decor-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --title-color: rgba(219, 0, 255, 1);
+  --hidden-var-style: #ff0070;
+  --shadows: 4px 4px 0px #ff0070;
+}

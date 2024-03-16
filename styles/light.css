@@ -1,0 +1,42 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+/* Файл light.css */
+
+.page.theme_light {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --background-theme: url(../images/cover-image-light.png);
+  --accent-color: rgba(255, 141, 203, 1);
+  --font-size: 18px;
+  --font-weight: 700;
+  --line-height: 23.4px;
+  --main-color: rgba(53, 52, 48, 1);
+  --text-color: rgba(53, 52, 48, 1);
+  --decor-color: rgba(53, 52, 48, 1);
+  --hover-color: rgba(50, 49, 45, 0.4);
+  --title-color: rgba(255, 194, 230, 1);
+  --hidden-var-style: rgba(255, 0, 112, 0);
+  --shadows: 4px 4px 0px #ff0070;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-theme: url(../images/cover-image-light.png);
+    --accent-color: rgba(255, 141, 203, 1);
+    --font-size: 18px;
+    --font-weight: 700;
+    --line-height: 23.4px;
+    --main-color: rgba(53, 52, 48, 1);
+    --text-color: rgba(53, 52, 48, 1);
+    --decor-color: rgba(53, 52, 48, 1);
+    --hover-color: rgba(50, 49, 45, 0.4);
+    --title-color: rgba(255, 194, 230, 1);
+    --hidden-var-style: rgba(255, 0, 112, 0);
+    --shadows: 4px 4px 0px #ff0070;
+  }
+}

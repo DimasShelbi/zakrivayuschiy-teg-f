@@ -1,0 +1,200 @@
+/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+*/
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  animation: theme 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes theme {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.theme-menu__button:focus-visible {
+  outline: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--font-color);
+  opacity: 0.6;
+  transform-origin: left;
+  transition: width 0.3s ease;
+  animation: underlineAnim 0.3s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+@keyframes underlineAnim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:disabled::before {
+  animation: arrowAnim 0.5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.heart {
+  animation-duration: 2s;
+}
+
+.heart .core {
+  fill: var(--background-color);
+  transition: fill 0.3s ease 0s;
+}
+
+.heart:hover .core {
+  fill: var(--counter);
+}
+
+.heart .main-body {
+  fill: var(--background-color);
+  opacity: 1;
+  transition: fill 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+.heart:hover .main-body {
+  fill: var(--counter);
+  opacity: 1;
+}
+
+.heart .main-body,
+.heart .core {
+  transition: fill 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.heart:active .core {
+  fill: var(--fill);
+}
+
+.heart:active .main-body {
+  fill: var(--fill);
+  opacity: 1;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.is-liked .core {
+  animation: fillCore 0.3s forwards;
+}
+
+.is-liked .main-body {
+  animation: fillMainBody 0.3s forwards;
+}
+
+.is-liked .contour {
+  animation: fillContour 0.3s forwards;
+  animation-delay: 0.06s;
+}
+
+.is-liked {
+  animation: scaleHeart 0.3s ease-in forwards;
+}
+
+.is-liked .sparks {
+  animation: sparkles 0.3s;
+  animation-delay: 0.3s;
+}
+
+@keyframes arrowAnim {
+  from {
+    transform: translateX(-24px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+
+  to {
+    transform: translateX(-24px);
+  }
+}
+
+@keyframes fillCore {
+  0% {
+    fill: none;
+  }
+  100% {
+    fill: var(--fill);
+  }
+}
+
+@keyframes fillMainBody {
+  0% {
+    fill: none;
+  }
+  100% {
+    fill: var(--fill);
+  }
+}
+
+@keyframes fillContour {
+  0% {
+    fill: var(--font-color);
+  }
+  100% {
+    fill: var(--fill);
+  }
+}
+
+@keyframes scaleHeart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkles {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
