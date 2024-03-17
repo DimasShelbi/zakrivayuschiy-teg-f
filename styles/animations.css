@@ -38,26 +38,21 @@
 
 .heart .core {
   fill: var(--background-color);
-  transition: fill 0.3s ease;
+  transition: fill 0.3s ease 0.03s;
 }
 
 .heart:hover .core {
   fill: var(--counter);
+  transition: fill 0.03s ease;
 }
 
 .heart .main-body {
   fill: var(--background-color);
-  opacity: 1;
   transition: fill 0.3s ease 0.05s;
 }
 .heart:hover .main-body {
   fill: var(--counter);
-  opacity: 1;
-}
-
-.heart .main-body,
-.heart .core {
-  transition: fill 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: fill 0.3s ease;
 }
 
 .heart:active .core {
@@ -66,7 +61,6 @@
 
 .heart:active .main-body {
   fill: var(--fill);
-  opacity: 1;
 }
 
 .sparks {
