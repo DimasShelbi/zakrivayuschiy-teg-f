@@ -26,6 +26,9 @@
     repeating-linear-gradient(180deg, #007f0c 0%, #004306 100%);
   --counter: rgba(0, 204, 20, 1);
   --fill: red;
+  --layble-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0), 1px 0 rgb(0, 0, 0),
+    0 -1px rgb(0, 0, 0);
+  --stroke: 1px rgb(0, 0, 0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,6 +54,9 @@
       repeating-linear-gradient(180deg, #007f0c 0%, #004306 100%);
     --counter: rgba(0, 204, 20, 1);
     --fill: red;
+    --layble-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0), 1px 0 rgb(0, 0, 0),
+      0 -1px rgb(0, 0, 0);
+    --stroke: 1px rgb(0, 0, 0);
   }
 }
 
@@ -76,6 +82,9 @@
     repeating-linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   --counter: rgba(0, 0, 0, 1);
   --fill: red;
+  --layble-shadow: -1px 0 rgba(255, 255, 255, 1), 0 1px rgba(255, 255, 255, 1),
+    1px 0 rgba(255, 255, 255, 1), 0 -1px rgba(255, 255, 255, 1);
+  --stroke: 1px rgba(255, 255, 255, 1);
 }
 
 @media (prefers-color-scheme: light) {
@@ -101,5 +110,8 @@
       repeating-linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
     --counter: rgba(0, 0, 0, 1);
     --fill: red;
+    --layble-shadow: -1px 0 rgba(255, 255, 255, 1), 0 1px rgba(255, 255, 255, 1),
+      1px 0 rgba(255, 255, 255, 1), 0 -1px rgba(255, 255, 255, 1);
+    --stroke: 1px rgba(255, 255, 255, 1);
   }
 }

@@ -1,20 +1,28 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-/* Файл variables.css */
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --background-theme: url(../images/cover-image-dark.png);
-  --accent-color: #ff0070;
-  --font-size: 18px;
-  --font-weight: 700;
-  --line-height: 23.4px;
-  --main-color: #000028;
-  --font: "IBM Plex Mono", Courier, monospace;
-  --text-color: #f1b2ce;
-  --decor-color: #ff0070;
-  --hover-color: rgba(255, 0, 112, 0.4);
-  --title-color: rgba(219, 0, 255, 1);
-  --hidden-var-style: #ff0070;
-  --shadows: 4px 4px 0px #ff0070;
+  --font-inter: "Inter-Variable", sans-serif;
+  --font-PressStart: "PressStart2P", sans-serif;
+  --font-color: rgba(0, 0, 0, 1);
+  --background-color: rgba(255, 255, 255, 1);
+  --blendmode: rgba(255, 255, 255, 1);
+  --background-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      #d3d3d300 2px,
+      #d3d3d300 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      #d3d3d300 2px,
+      #d3d3d300 4px
+    ),
+    repeating-linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  --counter: rgba(0, 0, 0, 1);
+  --fill: red;
+  --layble-shadow: -1px 0 rgba(255, 255, 255, 1), 0 1px rgba(255, 255, 255, 1),
+    1px 0 rgba(255, 255, 255, 1), 0 -1px rgba(255, 255, 255, 1);
+  --stroke: 1px rgba(255, 255, 255, 1);
 }

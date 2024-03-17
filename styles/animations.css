@@ -13,13 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-.theme-menu__button:disabled {
-  pointer-events: none;
-  animation: theme 0.3s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
 @keyframes theme {
   from {
     opacity: 1;
@@ -27,30 +20,6 @@
   to {
     opacity: 0.6;
   }
-}
-
-.theme-menu__button:focus-visible {
-  outline: none;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.theme-menu__button::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--font-color);
-  opacity: 0.6;
-  transform-origin: left;
-  transition: width 0.3s ease;
-  animation: underlineAnim 0.3s ease;
-}
-
-.theme-menu__button:focus-visible::after {
-  width: 100%;
 }
 
 @keyframes underlineAnim {
@@ -62,23 +31,14 @@
   }
 }
 
-.theme-menu__button:hover {
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.theme-menu__button:disabled::before {
-  animation: arrowAnim 0.5s ease-in-out;
-  animation-iteration-count: infinite;
-}
-
 .heart {
-  animation-duration: 2s;
+  animation-duration: 0.3s;
+  animation-delay: 0.1s;
 }
 
 .heart .core {
   fill: var(--background-color);
-  transition: fill 0.3s ease 0s;
+  transition: fill 0.3s ease;
 }
 
 .heart:hover .core {
@@ -88,7 +48,7 @@
 .heart .main-body {
   fill: var(--background-color);
   opacity: 1;
-  transition: fill 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: fill 0.3s ease 0.05s;
 }
 .heart:hover .main-body {
   fill: var(--counter);
@@ -115,10 +75,12 @@
 
 .is-liked .core {
   animation: fillCore 0.3s forwards;
+  animation-delay: 0.03s;
 }
 
 .is-liked .main-body {
   animation: fillMainBody 0.3s forwards;
+  animation-delay: 0.05s;
 }
 
 .is-liked .contour {
@@ -150,7 +112,7 @@
 
 @keyframes fillCore {
   0% {
-    fill: none;
+    fill: var(--fill);
   }
   100% {
     fill: var(--fill);
@@ -159,7 +121,7 @@
 
 @keyframes fillMainBody {
   0% {
-    fill: none;
+    fill: var(--fill);
   }
   100% {
     fill: var(--fill);
